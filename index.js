@@ -85,7 +85,7 @@ const server = http.createServer(async (req, res) => {
 
   // ✅ GOOGLE OAUTH - Step 1: Redirect to Google
   else if (req.url === "/auth/google" && req.method === "GET") {
-    const redirectUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${process.env.GOOGLE_CLIENT_ID}&redirect_uri=http://localhost:${PORT}/auth/google/callback&response_type=code&scope=profile email`;
+    const redirectUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${process.env.GOOGLE_CLIENT_ID}&redirect_uri=https://registration-server-7jj9.onrender.com/auth/google/callback&response_type=code&scope=profile email`;
     res.writeHead(302, { Location: redirectUrl });
     res.end();
   }
