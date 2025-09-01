@@ -110,7 +110,7 @@ const server = http.createServer(async (req, res) => {
           client_secret: process.env.GOOGLE_CLIENT_SECRET,
           code,
           grant_type: "authorization_code",
-          redirect_uri: `http://localhost:${PORT}/auth/google/callback`,
+          redirect_uri: `https://registration-server-7jj9.onrender.com/auth/google/callback`,
         }),
       });
 
